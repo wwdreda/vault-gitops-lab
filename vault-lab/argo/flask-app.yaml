@@ -8,12 +8,13 @@ spec:
     server: https://kubernetes.default.svc
     namespace: flask
   source:
-    repoURL: https://github.com/ton-user/vault-lab.git
+    repoURL: https://github.com/wwdreda/vault-gitops-lab.git
     targetRevision: HEAD
-    path: charts/flask-app
+    path: vault-lab/charts/flask-app
   project: default
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
     automated:
+      prune: true
       selfHeal: true
