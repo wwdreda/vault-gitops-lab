@@ -1,5 +1,5 @@
 image:
-  repository: your-dockerhub/flask-app
+  repository: wwdreda/flask-app
   tag: latest
   pullPolicy: IfNotPresent
 
