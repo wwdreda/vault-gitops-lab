@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: flask-app
+  name: demo-app
   namespace: argocd
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: flask
+    namespace: default
   source:
     repoURL: https://github.com/wwdreda/vault-gitops-lab.git
     targetRevision: HEAD
-    path: vault-lab/charts/flask-app
+    path: demo-app
+    plugin:
+      name: avp
   project: default
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
