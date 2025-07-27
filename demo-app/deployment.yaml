@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-configmap
-  namespace: default
-data:
-  secret-from-vault: <path:secret/data/myapp#mykey>
